@@ -1,0 +1,38 @@
+<h1>Formulario</h1>
+
+<%= form_with model: Sale.new, local: true do |f| %>
+<div>
+  <%= f.label :cod, "Codigo" %><br>
+  <%= f.number_field :cod %><br>
+</div>
+<br>
+<div>
+  <%= f.label :detail, "Venta" %><br>
+  <%= f.text_area :detail %><br>
+</div>
+<br>
+<div>
+  <%= f.label :category, "Categoria" %><br>
+  <%= f.text_field :category %><br>
+</div>
+<br>
+<div>
+  <%= f.label :value, "Valor" %><br>
+  <%= f.number_field :value %><br>
+</div>
+<br>
+<div>
+  <%= f.label :discount, "Descuento" %><br>
+  <%= f.number_field :discount %><br>
+</div>
+<br>
+<div>
+  <%= f.label :tax, "Exento de IVA" %><br>
+  <%= f.check_box :tax %><br>
+</div>
+<br>
+<div>
+  <%= f.submit "Enviar" %>
+</div>
+<br>
+<% end %>
